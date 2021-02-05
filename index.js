@@ -38,10 +38,10 @@ var div = document.createElement("div");
 var tab = document.createElement("div");
 var inputBlock = document.createElement("div");
 
-document.body.append(div);
-div.appendChild(tab);
 div.className = "div";
 tab.className = "tabs";
+document.body.appendChild(div);
+div.appendChild(tab);
 div.appendChild(inputBlock);
 
 categories.forEach(( elem, index ) => {
@@ -81,9 +81,9 @@ categories.forEach(( elem, index ) => {
 
                 img.src = "http://rrstatic.retailrocket.net/test_task/tovar.jpg";
                 img.className = "img";
-                content.appendChild(prod);
                 prod.className = "prod";
                 prodName.innerText = product.productName;
+                content.appendChild(prod);
                 prod.appendChild(img);
                 prod.appendChild(prodName);
             };
