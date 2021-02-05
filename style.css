@@ -1,0 +1,30 @@
+.content {
+    display: none;
+    min-width: 60%;
+    border-color: gray;
+    border-width: 2px;
+    border-style: solid;
+    padding-bottom: 40%;
+}
+
+.content.active {
+    display: flex;
+}
+
+.prod {
+    margin: 15px;
+    text-align: center;
+}
+
+.img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.input.active {
+    background-color: gray;
+}
+
+.input {
+    margin-right: 15px ;
+}
