@@ -1,5 +1,6 @@
 Thursday (14.00-16.00): Creat project, algorithm development, development
 (20.00-00.00):  js, css
+Friday (20.00-22.00): An attempt to implement the task differently
 
 Тестовое задание для html-верстальщика 
 Необходимо задействовать:

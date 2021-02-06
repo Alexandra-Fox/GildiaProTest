@@ -89,3 +89,98 @@ categories.forEach(( elem, index ) => {
             };
         });
 });
+
+/*
+var tabsModule = (function (width) {
+    (function createTabsContainer() {
+        var body = document.querySelector('body');
+        var container = document.createElement('div');
+        var tabsContainer = document.createElement('div');
+        var contentContainer = document.createElement('div');
+
+        container.classList.add('tabs-container');
+        tabsContainer.classList.add('tabs-container');
+        contentContainer.classList.add('content-container');
+
+        setDomNodeInBody(body, container);
+        setDomNodeInBody(container, tabsContainer);
+        setDomNodeInBody(container, contentContainer);
+
+        createTabs(tabsContainer);
+        createProduct(contentContainer);
+        setActiveOnFirstTab();
+    }());
+
+    function setActiveOnFirstTab() {
+        findElement('.tab').classList.add('active');
+        findElement('.content').classList.add('active');
+    }
+
+    function createTabs(tabsContainer) {
+        categories.forEach(function (category, i) {
+            var tab = document.createElement('button');
+
+            tab.classList.add('tab');
+            tab.setAttribute('data-content-active', category.categoryId);
+            tab.innerText = category.categoryName;
+            tab.addEventListener('click', function (e) {
+                removeClassActive('.content');
+                removeClassActive('.tab');
+
+                e.target.classList.add('active');
+                findElement('[data-content="' + category.categoryId + '"]').classList.add('active');
+            });
+
+            setDomNodeInBody(tabsContainer, tab);
+        });
+    }
+
+    function removeClassActive(selector) {
+        document.querySelectorAll(selector).forEach(function (elem) {
+            elem.classList.remove('active');
+        });
+    }
+
+    function createProduct(contentContainer) {
+        products.forEach(function (product) {
+            var productBlock = document.createElement('div');
+            var img = document.createElement('img');
+            var nameBlock = document.createElement('span');
+
+            productBlock.classList.add('product');
+            img.src = 'http://rrstatic.retailrocket.net/test_task/tovar.jpg';
+            nameBlock.innerText = product.productName;
+
+            setDomNodeInBody(productBlock, img);
+            setDomNodeInBody(productBlock, nameBlock);
+
+            appendProduct(contentContainer, productBlock, product.categoryId);
+        });
+    }
+
+    function appendProduct(contentContainer, productBlock, contentId) {
+        var contentSelector = '[data-content="' + contentId + '"]';
+
+        if (!findElement(contentSelector)) createContent(contentContainer, contentId);
+
+        setDomNodeInBody(findElement(contentSelector), productBlock);
+    }
+
+    function createContent(contentContainer, contentId) {
+        var content = document.createElement('div');
+
+        content.classList.add('content');
+        content.setAttribute('data-content', contentId);
+
+        setDomNodeInBody(contentContainer, content);
+    }
+
+    function setDomNodeInBody(parent, child) {
+        parent.append(child);
+    }
+
+    function findElement(selector) {
+        return document.querySelector(selector);
+    }
+}(window.innerWidth));
+*/
